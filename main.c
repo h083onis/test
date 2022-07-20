@@ -5,7 +5,7 @@
 double myRoot(double x) // x の平方根を返す関数。x >= 0 ではないとき exit(1) とする。 
 {
   double y;
-  if( x < 0 ){
+  if( !(x >= 0) ){
     exit(1);
   }
   y = sqrt(x);
@@ -15,7 +15,7 @@ double myRoot(double x) // x の平方根を返す関数。x >= 0 ではない�
 int main(void)
 {
   int i;
-  double *x = (double *) malloc (sizeof(double) * 100);
+  double *x = (double *) malloc (sizeof(double) * 101); //配列を101まで確保
 
   i = 0;
   while( i <= 100 ){
